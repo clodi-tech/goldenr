@@ -20,6 +20,16 @@ main {
 
 .input {
   padding: 10px;
+
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+.input::-webkit-inner-spin-button,
+.input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
 }
 
 .result {
