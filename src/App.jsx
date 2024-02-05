@@ -25,10 +25,10 @@ function App() {
           value={fontSize}
           onChange={handleInputChange}
         />
-        <p className='result' style={{ fontSize: `${fontSize}px` }}>p : {fontSize}px</p>
         <h4 className='golden-ratio' style={{ fontSize: `${calculateGoldenRatio()}px` }}>
           h4 : {calculateGoldenRatio().toFixed(2)}px
         </h4>
+        <p className='result' style={{ fontSize: `${fontSize}px` }}>p : {fontSize}px</p>
       </main>
     </>
   )
