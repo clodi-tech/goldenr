@@ -2,19 +2,16 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [fontSize, setFontSize] = useState('0px');
-  const goldenRatio = 1.618;
+  const [fontSize, setFontSize] = useState(10);
+  const goldenRatio = 1.61803399;
 
   const handleInputChange = (event) => {
-    setFontSize(`${event.target.value}px`);
+    setFontSize(event.target.value);
   }
 
   const calculateGoldenRatio = () => {
-    if (!isNaN(fontSize.replace('px', ''))) {
-      return `${fontSize.replace('px', '') * goldenRatio}px`;
-    }
-    return 'medium';
-  };
+    return fontSize * goldenRatio;
+  }
 
   return (
     <>
@@ -22,14 +19,15 @@ function App() {
       <main>
         <input
           className='input'
-          type='number'
-          placeholder='enter here the font size in px'
-          autoFocus
+          type='range'
+          min='5'
+          max='20'
+          value={fontSize}
           onChange={handleInputChange}
         />
-        <p className='result' style={{ fontSize: fontSize }}>p : {fontSize}</p>
-        <h4 className='golden-ratio' style={{ fontSize: calculateGoldenRatio() }}>
-          h4 : {calculateGoldenRatio()}
+        <p className='result' style={{ fontSize: `${fontSize}px` }}>p : {fontSize}px</p>
+        <h4 className='golden-ratio' style={{ fontSize: `${calculateGoldenRatio()}px` }}>
+          h4 : {calculateGoldenRatio().toFixed(2)}px
         </h4>
       </main>
     </>
