@@ -37,7 +37,9 @@ function App() {
         <h4 className='golden-ratio' style={{ fontSize: `${fontSize}px` }}>
           h4 : {fontSize}px
         </h4>
-        <p className='result' style={{ fontSize: `${fontSize}px` }}>p : {fontSize}px</p>
+        <p className='result' style={{ fontSize: `${fontSize}px` }}>
+          p : {fontSize}px
+        </p>
       </main>
     </>
   )
