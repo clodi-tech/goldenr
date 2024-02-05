@@ -6,7 +6,7 @@ function App() {
     <>
       <header>a project by libero</header>
       <main>
-        <input type='number' className='input' />
+        <input className='input' type='number' placeholder='enter here the font size in px' autoFocus/>
         <div className='result'>results</div>
       </main>
     </>
