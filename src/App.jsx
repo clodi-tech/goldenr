@@ -9,8 +9,8 @@ function App() {
     setFontSize(event.target.value);
   }
 
-  const calculateGoldenRatio = () => {
-    return fontSize * goldenRatio;
+  const calculateGoldenRatio = (multiplier) => {
+    return fontSize * Math.pow(goldenRatio, multiplier);
   }
 
   return (
@@ -25,8 +25,17 @@ function App() {
           value={fontSize}
           onChange={handleInputChange}
         />
-        <h4 className='golden-ratio' style={{ fontSize: `${calculateGoldenRatio()}px` }}>
-          h4 : {calculateGoldenRatio().toFixed(2)}px
+        <h1 style={{ fontSize: `${calculateGoldenRatio(3)}px` }}>
+          h1 : {calculateGoldenRatio(3).toFixed(2)}px
+        </h1>
+        <h2 style={{ fontSize: `${calculateGoldenRatio(2)}px` }}>
+          h2 : {calculateGoldenRatio(2).toFixed(2)}px
+        </h2>
+        <h3 style={{ fontSize: `${calculateGoldenRatio(1)}px` }}>
+          h3 : {calculateGoldenRatio(1).toFixed(2)}px
+        </h3>
+        <h4 className='golden-ratio' style={{ fontSize: `${fontSize}px` }}>
+          h4 : {fontSize}px
         </h4>
         <p className='result' style={{ fontSize: `${fontSize}px` }}>p : {fontSize}px</p>
       </main>
