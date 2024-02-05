@@ -1,0 +1,27 @@
+#root {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+header {
+  font-size: small;
+}
+
+main {
+  font-size: medium;
+}
+
+.input {
+  padding: 10px;
+}
+
+.result {
+  padding: 10px;
+}
