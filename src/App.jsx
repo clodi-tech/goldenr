@@ -6,7 +6,7 @@ function App() {
     <>
       <header>a project by libero</header>
       <main>
-        <div className='input'>input</div>
+        <input type='number' className='input' />
         <div className='result'>results</div>
       </main>
     </>
