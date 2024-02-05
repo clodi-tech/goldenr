@@ -19,7 +19,7 @@ function App() {
           autoFocus
           onChange={handleInputChange}
         />
-        <div className='result' style={{ fontSize: fontSize }}>results</div>
+        <p className='result' style={{ fontSize: fontSize }}>p : {fontSize}</p>
       </main>
     </>
   )
