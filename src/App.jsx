@@ -15,16 +15,7 @@ function App() {
 
   return (
     <>
-      <header>a project by libero</header>
       <main>
-        <input
-          className='input'
-          type='range'
-          min='5'
-          max='20'
-          value={fontSize}
-          onChange={handleInputChange}
-        />
         <h1 style={{ fontSize: `${calculateGoldenRatio(3)}px` }}>
           h1 : {calculateGoldenRatio(3).toFixed(2)}px
         </h1>
@@ -40,7 +31,16 @@ function App() {
         <p className='result' style={{ fontSize: `${fontSize}px` }}>
           p : {fontSize}px
         </p>
+        <input
+          className='input'
+          type='range'
+          min='5'
+          max='20'
+          value={fontSize}
+          onChange={handleInputChange}
+        />
       </main>
+      <footer>a project by libero</footer>
     </>
   )
 }
