@@ -32,7 +32,6 @@ function App() {
         {`<p> ${fontSize}px`}
         </p>
         <input
-          className='input'
           type='range'
           min='5'
           max='20'
