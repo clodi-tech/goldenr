@@ -1,6 +1,17 @@
 import { useState } from 'react'
 import './App.css'
 
+function Heading({ tag, multiplier, fontSize, calculateGoldenRatio }) {
+  const Tag = tag;
+  const size = calculateGoldenRatio(multiplier);
+
+  return (
+    <Tag style={{ fontSize: `${size}px` }}>
+      {`<${tag}> ${size.toFixed(2)}px`}
+    </Tag>
+  );
+}
+
 function App() {
   const [fontSize, setFontSize] = useState(10);
   const goldenRatio = 1.61803399;
@@ -16,12 +27,15 @@ function App() {
   return (
     <>
       <main>
-        <h1 style={{ fontSize: `${calculateGoldenRatio(3)}px` }}>
-          {`<h1> ${calculateGoldenRatio(3).toFixed(2)}px`}</h1>
-        <h2 style={{ fontSize: `${calculateGoldenRatio(2)}px` }}>
-          {`<h2> ${calculateGoldenRatio(2).toFixed(2)}px`}</h2>
-        <h3 style={{ fontSize: `${calculateGoldenRatio(1)}px` }}>
-          {`<h3> ${calculateGoldenRatio(1).toFixed(2)}px`}</h3>
+        {['h1', 'h2', 'h3'].map((tag, index) => (
+          <Heading
+            key={tag}
+            tag={tag}
+            multiplier={3 - index}
+            fontSize={fontSize}
+            calculateGoldenRatio={calculateGoldenRatio}
+          />
+        ))}
         <h4 style={{ fontSize: `${fontSize}px` }}>
           {`<h4> ${fontSize}px`}</h4>
         <p style={{ fontSize: `${fontSize}px` }}>
