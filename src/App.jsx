@@ -25,10 +25,10 @@ function App() {
         <h3 style={{ fontSize: `${calculateGoldenRatio(1)}px` }}>
           {`<h3> ${calculateGoldenRatio(1).toFixed(2)}px`}
         </h3>
-        <h4 className='golden-ratio' style={{ fontSize: `${fontSize}px` }}>
+        <h4 style={{ fontSize: `${fontSize}px` }}>
           {`<h4> ${fontSize}px`}
         </h4>
-        <p className='result' style={{ fontSize: `${fontSize}px` }}>
+        <p style={{ fontSize: `${fontSize}px` }}>
         {`<p> ${fontSize}px`}
         </p>
         <input
@@ -40,7 +40,7 @@ function App() {
           onChange={handleInputChange}
         />
       </main>
-      <footer>a project by libero</footer>
+      <footer>a project by <a href="https://sonolibero.io" target='_blank'>libero</a></footer>
     </>
   )
 }
