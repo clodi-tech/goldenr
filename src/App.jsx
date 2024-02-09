@@ -14,7 +14,7 @@ function Heading({ tag, multiplier, fontSize }) {
 }
 
 function App() {
-  const [fontSize, setFontSize] = useState(10);
+  const [fontSize, setFontSize] = useState(15);
 
   return (
     <>
@@ -34,7 +34,7 @@ function App() {
         <input
           type='range'
           min='5'
-          max='20'
+          max='30'
           value={fontSize}
           onChange={(event) => setFontSize(event.target.value)}/>
       </main>
