@@ -27,8 +27,6 @@ function App() {
             fontSize={fontSize}
           />
         ))}
-        <h4 style={{ fontSize: `${fontSize}px` }}>
-          {`<h4> ${fontSize}px`}</h4>
         <p style={{ fontSize: `${fontSize}px` }}>
         {`<p> ${fontSize}px`}</p>
         <input
