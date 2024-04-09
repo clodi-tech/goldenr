@@ -31,7 +31,7 @@ export default function RectSvg() {
 
     return (
         <main>
-            <svg width={size * 21} height={size * 34}>
+            <svg width={size * 21} height={size * 34} overflow='visible'>
                 {boxes.map((box, index) => (
                     <SvgBox key={index} {...box} size={size} />
                 ))}
