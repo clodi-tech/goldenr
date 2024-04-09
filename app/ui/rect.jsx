@@ -1,22 +1,14 @@
-const sizes = [ 1, 1, 2, 3, 5, 8, 13, 21 ];
-const unit = 10;
+const size = 10;
 
 export default function Rect() {
     return (
         <main>
-            <div>
-            {sizes.map((size, index) => (
-                <div key={index}
-                    className="text-center"
-                    style={{
-                        width: `${size * unit}px`,
-                        height: `${size * unit}px`,
-                        border: '1px solid white',
-                        display: 'inline-block',
-                    }}>
-                    {size}
-                </div>
-            ))}
+            <div className="grid grid-cols-5 grid-rows-8">
+                <div className="border-1 border-white w-30 h-30" style={{ gridColumn: "1 / span 3", gridRow: "1 / span 3" }}>3</div>
+                <div className="border-1 border-white w-20 h-20" style={{ gridColumn: "4 / span 2", gridRow: "1 / span 2" }}>2</div>
+                <div className="border-1 border-white w-10 h-10" style={{ gridColumn: 4, gridRow: 3 }}>1</div>
+                <div className="border-1 border-white w-10 h-10" style={{ gridColumn: 5, gridRow: 3 }}>1</div>
+                <div className="border-1 border-white w-50 h-50" style={{ gridColumn: "1 / span 5", gridRow: "4 / span 5" }}>5</div>
             </div>
         </main>
     );
