@@ -11,7 +11,7 @@ const config: Config = {
   theme: {
     extend: {
       gridTemplateColumns: {
-        '13': 'repeat(13, minmax(0, 1fr))',
+        '34': 'repeat(34, minmax(0, 1fr))',
       },
       gridTemplateRows: {
         '21': 'repeat(21, minmax(0, 1fr))',
