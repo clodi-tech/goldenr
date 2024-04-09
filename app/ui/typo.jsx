@@ -9,7 +9,7 @@ const mono = Roboto_Mono({
     weight: ['300']
 });
 
-const fixed = 15;
+const fixed = 12;
 
 function Heading({ tag, multiplier, fontSize }) {
   const goldenRatio = 1.61803399;
