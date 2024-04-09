@@ -18,8 +18,7 @@ function Typo() {
   const [fontSize, setFontSize] = useState(15);
 
   return (
-    <>
-      <main>
+    <main>
         {['h1', 'h2', 'h3'].map((tag, index) => (
           <Heading
             key={tag}
@@ -36,8 +35,7 @@ function Typo() {
           max='30'
           value={fontSize}
           onChange={(event) => setFontSize(event.target.value)}/>
-      </main>
-    </>
+    </main>
   )
 }
 
