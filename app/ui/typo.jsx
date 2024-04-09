@@ -9,7 +9,7 @@ const mono = Roboto_Mono({
     weight: ['300']
 });
 
-const fixed = 10;
+const fixed = 12;
 
 function Heading({ tag, multiplier, fontSize }) {
   const goldenRatio = 1.61803399;
@@ -19,7 +19,7 @@ function Heading({ tag, multiplier, fontSize }) {
 
   return (
     <Tag className={mono.className} style={{ fontSize: `${displaySize}px`, lineHeight: `${displaySize}px` }}>
-      {`<${tag}> ${size.toFixed(2)}px`}
+      {`<${tag}> ${size.toFixed(2)}`}
     </Tag>
   );
 }
@@ -38,7 +38,8 @@ function Typo() {
           />
         ))}
         <p style={{ fontSize: `${fixed}px` }}>
-        {`<p> ${fontSize}px`}</p>
+        {`<p> ${fontSize}`}</p>
+        <p>in pixels</p>
         <Slider aria-label="Volume" size="lg"
           className='w-[15rem]'
           value={fontSize} onChange={setFontSize}
