@@ -2,8 +2,13 @@ import { useState } from 'react';
 import { Slider } from '@nextui-org/slider';
 
 function SvgBox({ x, y, span, size }) {
+    const pathD = `M ${x} ${y} A ${span * size} ${span * size} 0 0 0 ${x + span * size} ${y + span * size}`;
+
     return (
-        <rect x={x} y={y} width={span * size} height={span * size} stroke="gray" fill="none" strokeWidth="1" />
+        <g>
+            <rect x={x} y={y} width={span * size} height={span * size} stroke="gray" fill="none" strokeWidth="1" />
+            <path d={pathD} stroke="white" fill="none" />
+        </g>
     );
 }
 
