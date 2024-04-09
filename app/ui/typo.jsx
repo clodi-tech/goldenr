@@ -2,6 +2,12 @@
 
 import { useState } from 'react'
 import { Slider } from '@nextui-org/slider'
+import { Roboto_Mono } from 'next/font/google';
+
+const mono = Roboto_Mono({ 
+    subsets: ["latin"],
+    weight: ['300']
+});
 
 function Heading({ tag, multiplier, fontSize }) {
   const goldenRatio = 1.61803399;
@@ -9,7 +15,7 @@ function Heading({ tag, multiplier, fontSize }) {
   const size = fontSize * Math.pow(goldenRatio, multiplier);
 
   return (
-    <Tag style={{ fontSize: `${size}px`, lineHeight: `${size}px` }}>
+    <Tag className={mono.className} style={{ fontSize: `${size}px`, lineHeight: `${size}px` }}>
       {`<${tag}> ${size.toFixed(2)}px`}
     </Tag>
   );
