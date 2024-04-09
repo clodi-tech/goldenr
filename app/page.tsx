@@ -1,13 +1,9 @@
-import LeftBar from "./home/leftbar";
-import Main from "./home/main";
-import RightBar from "./home/rightbar";
+import Typo from "./ui/typo";
 
 export default function Home() {
     return (
         <>
-            <LeftBar />
-            <Main />
-            <RightBar />
+            <Typo />
         </>
     );
 }
