@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { Slider } from '@nextui-org/slider'
 
 function Heading({ tag, multiplier, fontSize }) {
   const goldenRatio = 1.61803399;
@@ -29,12 +30,10 @@ function Typo() {
         ))}
         <p style={{ fontSize: `${fontSize}px` }}>
         {`<p> ${fontSize}px`}</p>
-        <input
-          type='range'
-          min='5'
-          max='30'
-          value={fontSize}
-          onChange={(event) => setFontSize(event.target.value)}/>
+        <Slider aria-label="Volume" size="lg"
+          className='w-[15rem]'
+          value={fontSize} onChange={setFontSize}
+          minValue={5} maxValue={30}/>
     </main>
   )
 }
