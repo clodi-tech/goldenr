@@ -2,14 +2,14 @@
 
 import { useState } from 'react'
 import { Slider } from '@nextui-org/slider'
-import { Roboto_Mono } from 'next/font/google';
+import { JetBrains_Mono } from 'next/font/google';
 
-const mono = Roboto_Mono({ 
+const mono = JetBrains_Mono({ 
     subsets: ["latin"],
-    weight: ['300']
+    weight: ['200']
 });
 
-const fixed = 11;
+const fixed = 20;
 
 function Heading({ tag, multiplier, fontSize }) {
   const goldenRatio = 1.61803399;
@@ -19,7 +19,7 @@ function Heading({ tag, multiplier, fontSize }) {
 
   return (
     <Tag className={mono.className} style={{ fontSize: `${displaySize}px`, lineHeight: `${displaySize}px` }}>
-      {`<${tag}> ${size.toFixed(2)}`}
+      {`<${tag}> ${size.toFixed(1)}`}
     </Tag>
   );
 }
@@ -29,21 +29,19 @@ function Typo() {
 
   return (
     <main>
-        {['h1', 'h2', 'h3'].map((tag, index) => (
+        {['h1', 'h2', 'p', 'small'].map((tag, index) => (
           <Heading
             key={tag}
             tag={tag}
-            multiplier={3 - index}
+            multiplier={2 - index}
             fontSize={fontSize}
           />
         ))}
-        <p style={{ fontSize: `${fixed}px` }}>
-        {`<p> ${fontSize}`}</p>
-        <p>in pixels</p>
         <Slider aria-label="Volume" size="lg"
           className='w-[15rem]'
           value={fontSize} onChange={setFontSize}
           minValue={5} maxValue={30}/>
+        <p>in pixels</p>
     </main>
   )
 }

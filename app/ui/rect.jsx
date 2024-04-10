@@ -1,6 +1,12 @@
 import { useState } from 'react';
 import { Slider } from '@nextui-org/slider';
 import Image from 'next/image';
+import { JetBrains_Mono } from 'next/font/google';
+
+const mono = JetBrains_Mono({ 
+    subsets: ["latin"],
+    weight: ['200']
+});
 
 const fixed = 18;
 const gr = 1.61803399;
@@ -39,8 +45,8 @@ export default function RectSvg() {
         <main>
             <Image src="/formula.svg" alt='formula' width={142} height={50} priority />
             <div className='flex gap-4'>
-                <p>a: {base}</p>
-                <p>b: {(base / gr).toFixed(5)}</p>
+                <p className={mono.className}>a: {base}</p>
+                <p className={mono.className}>b: {(base / gr).toFixed(5)}</p>
             </div>
             <Slider aria-label="Volume" size="lg"
                 className='w-[15rem]'
